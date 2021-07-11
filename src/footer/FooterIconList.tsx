@@ -1,33 +1,23 @@
 import { ReactNode } from 'react';
+import tw, { css } from 'twin.macro';
 
 type IFooterIconListProps = {
   children: ReactNode;
 };
 
-const FooterIconList = (props: IFooterIconListProps) => (
-  <div className="footer-icon-list flex flex-wrap">
-    {props.children}
+export const FooterIconList = ({ children }: IFooterIconListProps) => (
+  <div
+    className="footer-icon-list flex flex-wrap"
+    css={css`
+      a:not(:last-child) {
+        ${tw`mr-3`}
+      }
 
-    <style jsx>
-      {`
-        .footer-icon-list :global(a:not(:last-child)) {
-          @apply mr-3;
-        }
-
-        .footer-icon-list :global(a) {
-          @apply text-gray-500;
-        }
-
-        .footer-icon-list :global(a:hover) {
-          @apply text-gray-700;
-        }
-
-        .footer-icon-list :global(svg) {
-          @apply fill-current w-5 h-5;
-        }
-      `}
-    </style>
+      svg {
+        ${tw`w-5 h-5 fill-current`}
+      }
+    `}
+  >
+    {children}
   </div>
 );
-
-export { FooterIconList };

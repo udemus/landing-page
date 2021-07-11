@@ -1,31 +1,34 @@
-import { ReactNode } from 'react';
+import { useRouter } from 'next/router';
 
 type ISectionProps = {
   title?: string;
   description?: string;
-  yPadding?: string;
-  children: ReactNode;
+  image?: string;
+  imageAlt?: string;
 };
 
-const Section = (props: ISectionProps) => (
-  <div
-    className={`max-w-screen-lg mx-auto px-3 ${
-      props.yPadding ? props.yPadding : 'py-16'
-    }`}
-  >
-    {(props.title || props.description) && (
-      <div className="mb-12 text-center">
-        {props.title && (
-          <h2 className="text-4xl text-gray-900 font-bold">{props.title}</h2>
-        )}
-        {props.description && (
-          <div className="mt-4 text-xl md:px-20">{props.description}</div>
+export const Section = ({
+  description,
+  title,
+  image,
+  imageAlt,
+}: ISectionProps) => {
+  const router = useRouter();
+
+  return (
+    <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center space-y-3">
+        {title && <h2 className="mt-[120px] text-[32px] font-bold">{title}</h2>}
+        {description && (
+          <div className="mt-4 text-neutralSecondary">{description}</div>
         )}
       </div>
-    )}
 
-    {props.children}
-  </div>
-);
-
-export { Section };
+      {image && (
+        <div className="w-[940px] mt-10">
+          <img src={`${router.basePath}${image}`} alt={imageAlt} />
+        </div>
+      )}
+    </div>
+  );
+};
