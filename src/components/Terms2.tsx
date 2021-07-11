@@ -285,7 +285,7 @@ export const Terms2 = () => (
       contact us:
     </p>
     <ul>
-      <li>By email: ziad.beyens@udemus.com</li>
+      <li>By email: hello@udemus.com</li>
     </ul>
   </PrivacyTerms>
 );

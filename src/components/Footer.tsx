@@ -68,7 +68,7 @@ export const Footer = () => (
           </a>
         </div>
         <div>
-          <a href="mailto:ziad.beyens@udemus.com">Email us</a>
+          <a href="mailto:hello@udemus.com">Email us</a>
         </div>
       </Nav>
     </div>

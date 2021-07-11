@@ -482,7 +482,7 @@ export const Privacy = () => (
       If you have any questions about this Privacy Policy, You can contact us:
     </p>
     <ul>
-      <li>By email: ziad.beyens@udemus.com</li>
+      <li>By email: hello@udemus.com</li>
     </ul>
   </PrivacyTerms>
 );
