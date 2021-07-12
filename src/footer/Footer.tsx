@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import Link from 'next/link';
-import { Logo } from './Logo';
+import { Logo } from '../components/Logo';
 
 export const Nav = ({
   title,
@@ -23,7 +23,7 @@ export const Footer = () => (
       <div className="flex flex-col space-y-4">
         <Logo />
         <div className="text-neutralSecondary">
-          © 2021 Udemus. All rights reserved.
+          © {new Date().getFullYear()} Udemus. All rights reserved.
         </div>
         <div className="text-neutralSecondary">
           <Link href="/terms">

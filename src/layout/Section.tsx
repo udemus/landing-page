@@ -1,9 +1,10 @@
-import { useRouter } from 'next/router';
+import Image from 'next/image';
+import { css } from 'styled-components';
 
 type ISectionProps = {
   title?: string;
   description?: string;
-  image?: string;
+  image?: any;
   imageAlt?: string;
 };
 
@@ -13,8 +14,6 @@ export const Section = ({
   image,
   imageAlt,
 }: ISectionProps) => {
-  const router = useRouter();
-
   return (
     <div className="flex flex-col items-center">
       <div className="flex flex-col items-center space-y-3">
@@ -25,8 +24,14 @@ export const Section = ({
       </div>
 
       {image && (
-        <div className="w-[940px] mt-10">
-          <img src={`${router.basePath}${image}`} alt={imageAlt} />
+        <div
+          className="w-[940px] rounded-[6px] mt-10"
+          css={css`
+            box-shadow: 0px 2px 8px rgba(84, 70, 35, 0.15),
+              0px 1px 3px rgba(84, 70, 35, 0.15);
+          `}
+        >
+          <Image className="rounded-[6px]" src={image} alt={imageAlt} />
         </div>
       )}
     </div>
