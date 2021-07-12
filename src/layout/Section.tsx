@@ -1,19 +1,14 @@
+import { ImageProps } from 'next/dist/client/image';
 import Image from 'next/image';
 import { css } from 'styled-components';
 
 type ISectionProps = {
   title?: string;
   description?: string;
-  image?: any;
-  imageAlt?: string;
+  imageProps?: ImageProps;
 };
 
-export const Section = ({
-  description,
-  title,
-  image,
-  imageAlt,
-}: ISectionProps) => {
+export const Section = ({ description, title, imageProps }: ISectionProps) => {
   return (
     <div className="flex flex-col items-center">
       <div className="flex flex-col items-center space-y-3">
@@ -23,7 +18,7 @@ export const Section = ({
         )}
       </div>
 
-      {image && (
+      {imageProps && (
         <div
           className="w-[940px] rounded-[6px] mt-10"
           css={css`
@@ -31,7 +26,7 @@ export const Section = ({
               0px 1px 3px rgba(84, 70, 35, 0.15);
           `}
         >
-          <Image className="rounded-[6px]" src={image} alt={imageAlt} />
+          <Image className="rounded-[6px]" {...imageProps} />
         </div>
       )}
     </div>
