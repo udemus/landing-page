@@ -2,16 +2,16 @@
   "name": "next-js-boilerplate",
   "version": "1.0.0",
   "scripts": {
+    "clean": "rimraf .next out",
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "build-stats": "cross-env ANALYZE=true npm run build",
-    "export": "next export",
     "build-prod": "run-s clean build export",
-    "clean": "rimraf .next out",
-    "lint": "next lint",
+    "build-stats": "cross-env ANALYZE=true npm run build",
     "build-types": "tsc --noEmit --pretty",
-    "prepare": "husky install"
+    "export": "next export -o _static",
+    "lint": "next lint",
+    "prepare": "husky install",
+    "start": "next start"
   },
   "dependencies": {
     "@fluentui/react": "^8.22.3",
