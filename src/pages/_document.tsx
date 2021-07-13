@@ -56,6 +56,8 @@ export default class MyDocument extends Document {
               />
             </>
           )}
+
+          <script async src="/scripts/ml.js" />
         </Head>
         <body>
           <Main />

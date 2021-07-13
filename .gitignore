@@ -13,7 +13,7 @@
 /out
 
 # static folder for DigitalOcean App Platform
-_static
+/_static
 
 # production
 /build
