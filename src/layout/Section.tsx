@@ -22,8 +22,8 @@ export const Section = ({ description, title, imageProps }: ISectionProps) => {
         <div
           className="w-[940px] rounded-[6px] mt-10"
           css={css`
-            box-shadow: 0px 2px 8px rgba(84, 70, 35, 0.15),
-              0px 1px 3px rgba(84, 70, 35, 0.15);
+            box-shadow: 0 2px 8px rgba(84, 70, 35, 0.15),
+              0 1px 3px rgba(84, 70, 35, 0.15);
           `}
         >
           <Image className="rounded-[6px]" {...imageProps} />
