@@ -51,6 +51,12 @@ export const Form = () => (
         width: 100% !important;
         height: 100% !important;
       }
+
+      .ml-form-successContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
     `}
   />
   // <div className="flex space-x-2.5">
