@@ -1,5 +1,5 @@
 /* eslint-disable react/no-danger */
-import Document, { Html, Main, NextScript } from 'next/document';
+import Document, { Head, Html, Main, NextScript } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 import { GA_TRACKING_ID } from '../lib/gtag';
 import { AppConfig } from '../utils/AppConfig';
@@ -36,25 +36,23 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html lang={AppConfig.locale}>
-        {GA_TRACKING_ID && (
-          <>
-            <script
-              async
-              src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-            />
+        <Head>
+          <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+          />
 
-            <script
-              dangerouslySetInnerHTML={{
-                __html: `
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
                   window.dataLayer = window.dataLayer || [];
                   function gtag(){dataLayer.push(arguments);}
                   gtag('js', new Date());
                   gtag('config', '${GA_TRACKING_ID}', { page_path: window.location.pathname });
                 `,
-              }}
-            />
-          </>
-        )}
+            }}
+          />
+        </Head>
         <body>
           <Main />
           <NextScript />
