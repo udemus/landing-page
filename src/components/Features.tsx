@@ -18,20 +18,20 @@ export const Features = () => (
       title="Map your knowledge"
       description="Create and share dynamic learning paths"
       imageProps={{
-        src: 'v1626129067/browser2_mzxxda',
+        src: 'v1626129067/browser3_zj2sgy',
         alt: 'Knowledge map',
         width: 1880,
-        height: 1397,
+        height: 1025,
       }}
     />
     <Section
       title="Practice your skills"
       description="Keep track of your progress for an optimized learning experience"
       imageProps={{
-        src: 'v1626129067/browser3_zj2sgy',
+        src: 'v1626129067/browser4_joyqzr',
         alt: 'Learn',
         width: 1880,
-        height: 1025,
+        height: 1125,
       }}
     />
 
@@ -39,10 +39,10 @@ export const Features = () => (
       title="Powerful editor"
       description="Create an amazing interactive learning experience"
       imageProps={{
-        src: 'v1626129067/browser4_joyqzr',
+        src: 'v1626129067/browser2_mzxxda',
         alt: 'Editor',
         width: 1880,
-        height: 1125,
+        height: 1397,
       }}
     />
 
