@@ -5,23 +5,44 @@ export const Features = () => (
   <>
     <Section
       title="Built for unique people"
-      description="Never get lost with personalized education"
+      description="Enjoy your personalized learning feed"
       imageProps={{
-        src: 'v1626129065/section-1_nfg2hj.png',
-        alt: 'Home Feed',
+        src: 'v1626129065/browser1_ny8v8j',
+        alt: 'Learning feed',
         width: 1880,
-        height: 1368,
+        height: 1448,
       }}
     />
 
     <Section
-      title="First-class editor"
-      description="Organize your knowledge into interactive pages"
+      title="Map your knowledge"
+      description="Create and share dynamic learning paths"
       imageProps={{
-        src: 'v1626129067/section-2_jnnpxg.png',
+        src: 'v1626129067/browser2_mzxxda',
+        alt: 'Knowledge map',
+        width: 1880,
+        height: 1397,
+      }}
+    />
+    <Section
+      title="Practice your skills"
+      description="Keep track of your progress for an optimized learning experience"
+      imageProps={{
+        src: 'v1626129067/browser3_zj2sgy',
+        alt: 'Learn',
+        width: 1880,
+        height: 1025,
+      }}
+    />
+
+    <Section
+      title="Powerful editor"
+      description="Create an amazing interactive learning experience"
+      imageProps={{
+        src: 'v1626129067/browser4_joyqzr',
         alt: 'Editor',
         width: 1880,
-        height: 1107,
+        height: 1125,
       }}
     />
 
