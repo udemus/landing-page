@@ -7,7 +7,7 @@ import { Hero } from './Hero';
 
 export const Body = () => (
   <div className="flex flex-col items-center text-neutralPrimary antialiased">
-    <div className="w-[1260px] relative flex flex-col items-center">
+    <div className="max-w-[1280px] relative flex flex-col items-center px-5 w-full">
       <Meta title={AppConfig.title} description={AppConfig.description} />
       <Header />
       <Hero />
