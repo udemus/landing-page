@@ -7,7 +7,7 @@ export const Hero = () => (
     </h1>
 
     <h2 className="text-[20px] md:text-[17px] text-center">
-      Education for all. Write, think and explore together.
+      Free education for all. Write, think and explore together.
     </h2>
 
     <div className="mt-5">
